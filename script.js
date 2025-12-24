@@ -1,1 +1,1 @@
-https://rex-w-ride.cloudflareaccess.com/cdn-cgi/access/certs
+https://taxjar-lookup.rex-w-ride.workers.dev/
