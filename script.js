@@ -1,1 +1,1 @@
-56572692a7414547a10dea61918d501cc7b91ee259b272ea3f09cd7fc113241f
+https://rex-w-ride.cloudflareaccess.com/cdn-cgi/access/certs
