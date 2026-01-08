@@ -1,15 +1,15 @@
 body {
   font-family: Arial, sans-serif;
-  padding: 40px;
+  max-width: 400px;
+  margin: 40px auto;
 }
 
-input {
-  display: block;
-  margin: 8px 0;
+input, button {
+  width: 100%;
   padding: 8px;
+  margin: 6px 0;
 }
 
 button {
-  padding: 8px 12px;
   cursor: pointer;
 }
