@@ -1,5 +1,8 @@
 const form = document.getElementById("taxForm");
 const output = document.getElementById("output");
+const response = await fetch(
+  "https://taxjar-lookup.rex-w-ride.workers.dev/lookup?" + params.toString()
+);
 
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
