@@ -1,8 +1,6 @@
 const form = document.getElementById("taxForm");
-const output = document.getElementById("output");
-const response = await fetch(
-  "https://taxjar-lookup.rex-w-ride.workers.dev/lookup?" + params.toString()
-);
+const output = document.createElement("pre");
+document.body.appendChild(output); // add output area if you don't have one
 
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
@@ -10,10 +8,10 @@ form.addEventListener("submit", async (e) => {
   output.textContent = "Loading...";
 
   const params = new URLSearchParams({
-    street: street.value,
-    city: city.value,
-    state: state.value,
-    zip: zip.value
+    street: document.getElementById("street").value,
+    city: document.getElementById("city").value,
+    state: document.getElementById("state").value,
+    zip: document.getElementById("zip").value
   });
 
   try {
@@ -21,9 +19,7 @@ form.addEventListener("submit", async (e) => {
       "https://taxjar-lookup.rex-w-ride.workers.dev/lookup?" + params.toString()
     );
 
-    if (!response.ok) {
-      throw new Error("Failed to fetch tax rate");
-    }
+    if (!response.ok) throw new Error("Failed to fetch tax data");
 
     const data = await response.json();
 
@@ -32,7 +28,7 @@ Combined Rate: ${data.combined_rate}
 State: ${data.state}
 County: ${data.county}
 City: ${data.city}
-`.trim();
+    `.trim();
 
   } catch (err) {
     output.textContent = "Error: " + err.message;
