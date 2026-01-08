@@ -1,18 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
   <title>Tax Rate Lookup</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h2>Tax Rate Lookup</h2>
+  <h1>Tax Rate Lookup</h1>
 
   <form id="taxForm">
-    <input id="street" placeholder="Street" required>
-    <input id="city" placeholder="City" required>
-    <input id="state" placeholder="State (CA)" required>
-    <input id="zip" placeholder="ZIP Code" required>
-    <button type="submit">Get Tax</button>
+    <input id="street" placeholder="Street (optional)" />
+    <input id="city" placeholder="City (optional)" />
+    <input id="state" placeholder="State (CA)" required />
+    <input id="zip" placeholder="ZIP Code" required />
+    <button type="submit">Get Tax Rate</button>
   </form>
 
   <pre id="output"></pre>
